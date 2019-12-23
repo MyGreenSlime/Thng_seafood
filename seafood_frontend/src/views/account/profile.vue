@@ -39,6 +39,7 @@ export default {
       let base64 = await this.base64_encode(this.$refs.file.files[0]);
       console.log(base64);
       this.image = base64;
+      
     },
     base64_encode(file) {
       return new Promise((resolve, reject) => {

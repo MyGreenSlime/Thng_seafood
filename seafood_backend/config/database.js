@@ -57,8 +57,6 @@ const Address = sequelize.define("Address", {
   }
 })
 
-<<<<<<< HEAD
-=======
 const Product =  sequelize.define("Product", {
   ProductName : {
     type : Sequelize.TEXT,
@@ -127,7 +125,6 @@ const Order = sequelize.define('Order', {
   }
 })
 
->>>>>>> dondon
 User.sync({ force: false })
 Address.sync({ force: false })
 Product.sync({ force: false })
@@ -135,10 +132,5 @@ Cart.sync({ force: false })
 Order.sync({ force: false })
 
 module.exports = {
-<<<<<<< HEAD
-  sequelize, User, Address,
-}
-=======
     sequelize,User,Address,Product
   }
->>>>>>> dondon
