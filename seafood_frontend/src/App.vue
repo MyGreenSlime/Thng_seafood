@@ -4,16 +4,9 @@
       <b-navbar-nav>
         <img src="@/assets/logo3.png" height="60">
         <div id="nav">
-          <router-link to="/">Home</router-link> | 
-          <router-link to="/about">About</router-link>  | 
-          <router-link to="/profile">profile</router-link> | 
-          <router-link to="/profile/address">address</router-link> | 
-          <router-link to="/profile/address/10">address detail</router-link> | 
-          <router-link to="/cart">cart</router-link> | 
-          <router-link to="/product">product</router-link> | 
-          <router-link to="/product/1">product detail</router-link> | 
-          <router-link to="/product/categories/5">product cate</router-link> | 
-          <router-link to="/checkout">checkout</router-link>
+          <router-link to="/">หน้าหลัก</router-link> | 
+          <router-link to="/about">เพิ่มรายการ</router-link>  | 
+          <router-link to="/product">สินค้า</router-link>
         </div>
       </b-navbar-nav>
     </b-navbar>
@@ -38,7 +31,7 @@
 
 #nav a {
   font-weight: bold;
-  color: #191c2a;
+  color: #ffffff;
 }
 
 #nav a.router-link-exact-active {

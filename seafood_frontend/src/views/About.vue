@@ -1,7 +1,9 @@
 
 
 <template>
-  <div class="about">
+  <div class="about" id="color">
+    <br>
+    <br>
     <h1>เพิ่มรายการ</h1>
     <div1>
       <p>
@@ -100,8 +102,8 @@
 
 
 <script>
-import Auth from "@api/Auth";
-import base64 from "@libs/base64";
+import Auth from "../api/Auth";
+import base64 from "../libs/base64";
 import product from "../api/Product"
 import { async } from 'q';
 export default {
@@ -154,5 +156,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style>
+#color {
+  color:#ffffff;
+}
 </style>

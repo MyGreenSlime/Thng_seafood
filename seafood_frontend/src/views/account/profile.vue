@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import Auth from "@api/Auth";
+import Auth from "../../api/Auth";
 import { async } from "q";
 export default {
   name: "Profile",
