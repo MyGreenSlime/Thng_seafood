@@ -3,7 +3,7 @@
 <template>
   <div class="about">
     <h1>เพิ่มรายการ</h1>
-    <div1>
+    <div>
       <p>
     <label >ชื่อรายการ : </label>
     <input
@@ -87,7 +87,7 @@
    
   </p>
  
-    </div1>
+    </div>
     
     
 
