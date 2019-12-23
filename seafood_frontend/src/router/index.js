@@ -2,16 +2,16 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 // import Home from '../views/Home.vue'
 
-import Profile from '../views/account/profile.vue'
-import Address from '../views/account/address.vue'
-import AddressDetail from '../views/account/address_detail.vue'
-import Cart from '../views/account/cart.vue'
+import Profile from '@views/account/profile.vue'
+import Address from '@views/account/address.vue'
+import AddressDetail from '@views/account/address_detail.vue'
+import Cart from '@views/account/cart.vue'
 
-import Product from '../views/product/product.vue'
-import ProductDetail from '../views/product/product_detail.vue'
-import ProductCategories from '../views/product/product_categories.vue'
+import Product from '@views/product/product.vue'
+import ProductDetail from '@views/product/product_detail.vue'
+import ProductCategories from '@views/product/product_categories.vue'
 
-import Checkout from '../views/checkout/checkout.vue'
+import Checkout from '@views/checkout/checkout.vue'
 
 Vue.use(VueRouter)
 

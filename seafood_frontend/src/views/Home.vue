@@ -1,8 +1,20 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div>
+      <b-card
+        title="Card Title"
+        img-src=""
+        img-top
+        style="max-width: 20rem"
+        class="mb-2"
+      >
+      <b-card-text>
+        something
+      </b-card-text>
+      <b-button herf="#" varient="primary">Go</b-button>
+      </b-card>
+    </div>
+    
 </template>
 
 <script>
