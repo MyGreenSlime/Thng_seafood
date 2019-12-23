@@ -4,7 +4,7 @@ const {sequelize} = require("./config/database")
 const passport = require('passport')
 const app = express();
 const port = 3001;
-app.use(bodyParser.json());
+app.use(bodyParser.json({limit: '2MB'}));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 require('./config/passport')(passport)
@@ -23,6 +23,7 @@ app.all("/*", function(req, res, next) {
 
 app.use("/api/user", require("./route/user"))
 app.use("/api/address", require("./route/address"))
+app.use("/api/product", require("./route/product"))
 
 app.listen(port, () => {
   console.log("server listening on port :", port);
