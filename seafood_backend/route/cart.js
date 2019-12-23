@@ -36,7 +36,8 @@ router.get("/current",passport.authenticate('jwt',{session : false}), async (req
             }
         })
         if(query){
-            res.status(200).send(MessageHelper.ResponseMessage(true, "Get Current Cart {Exist}", query))
+            res.status(200).send(MessageHelper.ResponseMessage(
+                true, "Get Current Cart {Exist}", query))
         } else {
             let result = await Cart.create({
                 UserId : req.user.id
