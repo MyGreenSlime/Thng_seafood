@@ -51,6 +51,15 @@ router.get("/current",passport.authenticate('jwt',{session : false}), async (req
     }
 })
 
+
+router.post("/addproduct/:id",passport.authenticate('jwt',{session : false}), async(req, res) => {
+    try{
+        
+    } catch {
+
+    }
+})
+
 // router.post("/create", async(req, res) =>{
 //     let data  =  req.body
 //     try {
