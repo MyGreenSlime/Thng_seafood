@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
-//const sequelize = new Sequelize('mysql://root:ZXCasdqwe1234!@119.59.114.59:3306/seafood');
-const sequelize = new Sequelize('mysql://root:example@localhost:3306/seafood');
+const sequelize = new Sequelize('mysql://root:ZXCasdqwe1234!@119.59.114.59:3306/seafood');
+//const sequelize = new Sequelize('mysql://root:example@localhost:3306/seafood');
 sequelize
 .authenticate()
 .then(() => {
@@ -56,10 +56,45 @@ const Address = sequelize.define("Address", {
         } 
     }
 })
+
+const Product =  sequelize.define("Product", {
+  ProductName : {
+    type : Sequelize.TEXT,
+    allowNull : false
+  },
+  Weight : {
+    type : Sequelize.INTEGER,
+    allowNull : false
+  },
+  Price : {
+    type : Sequelize.INTEGER,
+    allowNull : false,
+  },
+  Description : {
+    type : Sequelize.TEXT,
+    allowNull : false
+  },
+  Vendor : {
+    type : Sequelize.TEXT
+  },
+  Provice : {
+    type : Sequelize.TEXT,
+  },
+  EndDate : {
+    type : Sequelize.DATE
+  },
+  Catagory : {
+    type : Sequelize.ENUM("กุ้ง-กั้ง","ปู","หอย","ปลา","หมึก","อื่นๆ")
+  },
+  ImgSrc : {
+    type : Sequelize.TEXT
+  }
+})
  
 User.sync({ force: false })
 Address.sync({ force: false })
+Product.sync({force : false})
 
 module.exports = {
-    sequelize,User,Address,
+    sequelize,User,Address,Product
   }
