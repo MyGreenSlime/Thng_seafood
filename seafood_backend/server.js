@@ -24,6 +24,7 @@ app.all("/*", function(req, res, next) {
 app.use("/api/user", require("./route/user"))
 app.use("/api/address", require("./route/address"))
 app.use("/api/product", require("./route/product"))
+app.use("/api/cart", require("./route/cart"))
 
 app.listen(port, () => {
   console.log("server listening on port :", port);

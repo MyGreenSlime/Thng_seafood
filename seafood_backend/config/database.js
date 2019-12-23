@@ -132,5 +132,5 @@ Cart.sync({ force: false })
 Order.sync({force : false})
 
 module.exports = {
-    sequelize,User,Address,Product
+    sequelize,User,Address,Product,Cart,Order
   }
