@@ -1,11 +1,15 @@
 const express = require("express");
 const bodyParser = require("body-parser");;
+const {sequelize} = require("./config/database")
+const passport = require('passport')
 const app = express();
 const port = 3001;
-
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+require('./config/passport')(passport)
+app.use(passport.initialize());
+//passport config
 
 app.all("/*", function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -16,6 +20,8 @@ app.all("/*", function(req, res, next) {
   res.header("Access-Control-Allow-Methods", "POST, GET, PUT, DELETE");
   next();
 });
+
+app.use("/api/user", require("./route/user"))
 
 
 app.listen(port, () => {
