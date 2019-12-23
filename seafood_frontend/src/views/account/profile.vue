@@ -11,7 +11,6 @@
 
 <script>
 import Auth from "@api/Auth";
-import base64 from "@libs/base64";
 import { async } from "q";
 export default {
   name: "Profile",

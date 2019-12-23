@@ -5,7 +5,7 @@ export default {
             reader.readAsDataURL(file);
             reader.onload = () => resolve(reader.result);
             reader.onerror = error => reject(error);
-
         });
     }
 }
+
