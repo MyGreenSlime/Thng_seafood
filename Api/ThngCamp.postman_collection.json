@@ -1,0 +1,225 @@
+{
+	"info": {
+		"_postman_id": "f63d493b-0bb9-4086-af34-79be356cad08",
+		"name": "ThngCamp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"FirstName\" : \"DONDON\",\r\n\t\"LastName\" : \"DONDON\",\r\n\t\"Email\" : \"ดนดน@คน.ไทย\",\r\n\t\"Password\" : \"123456\",\r\n\t\"MobilePhone\" : \"0813819587\",\r\n\t\"Role\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3001/api/user/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiRmlyc3ROYW1lIjoiRE9ORE9OIiwiTGFzdE5hbWUiOiJET05ET04iLCJFbWFpbCI6ImRvbkBnbWFpbC5jb20iLCJSb2xlIjoiYWRtaW4iLCJpYXQiOjE1NzcwOTU5ODcsImV4cCI6MTU3NzEzMTk4N30.CV-87wLyRODIcw5TTGMq4DwX-Nu4uKIDCGkMgc80VQ8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Email\" : \"don@gmail.com\",\n\t\"Password\" : \"123456\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3001/api/user/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiRmlyc3ROYW1lIjoiRE9ORE9OIiwiTGFzdE5hbWUiOiJET05ET04iLCJFbWFpbCI6ImRvbkBnbWFpbC5jb20iLCJSb2xlIjoiYWRtaW4iLCJpYXQiOjE1NzcxMDY0OTgsImV4cCI6MTU3NzE0MjQ5OH0.yYssCGShUmXlrglqr5rGQT6UleumdF2RsAaqxiEX7lQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3001/api/user/profile/",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"user",
+								"profile",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Address",
+			"item": [
+				{
+					"name": "create new address",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiRmlyc3ROYW1lIjoiRE9ORE9OIiwiTGFzdE5hbWUiOiJET05ET04iLCJFbWFpbCI6ImRvbkBnbWFpbC5jb20iLCJSb2xlIjoiYWRtaW4iLCJpYXQiOjE1NzcxMDY0OTgsImV4cCI6MTU3NzE0MjQ5OH0.yYssCGShUmXlrglqr5rGQT6UleumdF2RsAaqxiEX7lQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Address\" : \"Hell\",\n\t\"Provice\" : \"Chanthaburi\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3001/api/address/create",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"address",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "find alll address by userid",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiRmlyc3ROYW1lIjoiRE9ORE9OIiwiTGFzdE5hbWUiOiJET05ET04iLCJFbWFpbCI6ImRvbkBnbWFpbC5jb20iLCJSb2xlIjoiYWRtaW4iLCJpYXQiOjE1NzcxMDY0OTgsImV4cCI6MTU3NzE0MjQ5OH0.yYssCGShUmXlrglqr5rGQT6UleumdF2RsAaqxiEX7lQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3001/api/address/user/4",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"address",
+								"user",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get All Address",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiRmlyc3ROYW1lIjoiRE9ORE9OIiwiTGFzdE5hbWUiOiJET05ET04iLCJFbWFpbCI6ImRvbkBnbWFpbC5jb20iLCJSb2xlIjoiYWRtaW4iLCJpYXQiOjE1NzcxMDY0OTgsImV4cCI6MTU3NzE0MjQ5OH0.yYssCGShUmXlrglqr5rGQT6UleumdF2RsAaqxiEX7lQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3001/api/address/all",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"address",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
