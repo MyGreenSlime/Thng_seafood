@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-// import Home from '../views/Home.vue'
+import Home from '../views/Home.vue'
 
 import Profile from '@views/account/profile.vue'
 import Address from '@views/account/address.vue'
@@ -19,7 +19,7 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: Address
+    component: Home
   },
   {
     path: '/about',

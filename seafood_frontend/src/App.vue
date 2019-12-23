@@ -1,7 +1,8 @@
 <template>
   <div id="app">
-    <b-navbar type="dark" variant="dark">
+    <b-navbar variant="dark">
       <b-navbar-nav>
+        <img src="@/assets/logo3.png" height="60">
         <div id="nav">
           <router-link to="/">Home</router-link> | 
           <router-link to="/about">About</router-link>  | 
@@ -27,15 +28,17 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #191c2a;
+  height: 100vh;
+  background-color: #191c2a;
 }
 
 #nav {
-  padding: 30px;
+  padding: 20px;
 }
 
 #nav a {
   font-weight: bold;
-  color: #ffffff;
+  color: #191c2a;
 }
 
 #nav a.router-link-exact-active {
