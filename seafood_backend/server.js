@@ -22,7 +22,7 @@ app.all("/*", function(req, res, next) {
 });
 
 app.use("/api/user", require("./route/user"))
-
+app.use("/api/address", require("./route/address"))
 
 app.listen(port, () => {
   console.log("server listening on port :", port);

@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-// const sequelize = new Sequelize('mysql://root:ZXCasdqwe1234!@119.59.114.59:3306/seafood');
+//const sequelize = new Sequelize('mysql://root:ZXCasdqwe1234!@119.59.114.59:3306/seafood');
 const sequelize = new Sequelize('mysql://root:example@localhost:3306/seafood');
 sequelize
 .authenticate()
