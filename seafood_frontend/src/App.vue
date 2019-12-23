@@ -3,6 +3,14 @@
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
+      <router-link to="/profile">profile</router-link>
+      <router-link to="/profile/address">address</router-link>
+      <router-link to="/profile/address/10">address detail</router-link>
+      <router-link to="/cart">cart</router-link>
+      <router-link to="/product">product</router-link>
+      <router-link to="/product/1">product detail</router-link>
+      <router-link to="/product/categories/5">product cate</router-link>
+      <router-link to="/checkout">checkout</router-link>
     </div>
     <router-view/>
   </div>
