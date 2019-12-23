@@ -90,10 +90,46 @@ const Product =  sequelize.define("Product", {
     type : Sequelize.TEXT
   }
 })
+
+const Cart = sequelize.define('Cart', {
+  UserId : {
+    type: Sequelize.INTEGER,
+        references: {
+          model: User,
+          key: 'id'
+        } 
+  },
+  Opened : {
+    type: Sequelize.BOOLEAN,
+    defaultValue : true
+  }
+})
+
+const Order = sequelize.define('Order', {
+  CartId : {
+    type: Sequelize.INTEGER,
+        references: {
+          model: Cart,
+          key: 'id'
+        } 
+  },
+  ProductId : {
+    type: Sequelize.INTEGER,
+        references: {
+          model: Product,
+          key: 'id'
+        } 
+  },
+  Count : {
+    type: Sequelize.INTEGER,
+  }
+})
  
 User.sync({ force: false })
 Address.sync({ force: false })
 Product.sync({force : false})
+Cart.sync({ force: false })
+Order.sync({force : false})
 
 module.exports = {
     sequelize,User,Address,Product

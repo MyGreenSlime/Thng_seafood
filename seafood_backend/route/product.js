@@ -28,7 +28,7 @@ router.get("/:id", async(req, res) => {
     }
 })
 
-router.post("/create", passport.authenticate('jwt',{session : false}), async(req, res) =>{
+router.post("/create", async(req, res) =>{
     let data  =  req.body
     try {
         await Product.create({
