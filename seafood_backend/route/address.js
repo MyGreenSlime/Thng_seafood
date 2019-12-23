@@ -5,10 +5,10 @@ const passport = require('passport')
 const {User, Address} = require("../config/database")
 router.get("/all", passport.authenticate('jwt',{session : false}), async(req, res) =>{
     try {
-        let query = Address.findAll()
-        req.status(200).send(MessageHelper.ResponseMessage(true, "Get All Address", query))
+        let query = await Address.findAll({})
+        res.status(200).send(MessageHelper.ResponseMessage(true, "Get All Address", query))
     } catch(err) {
-        req.status(500).send(MessageHelper.ErrorMessage(false,err))
+        res.status(500).send(MessageHelper.ErrorMessage(false,err))
     }
 })
 router.get("/user/:id",  passport.authenticate('jwt',{session : false}), async(req, res) => {
@@ -21,7 +21,7 @@ router.get("/user/:id",  passport.authenticate('jwt',{session : false}), async(r
         })
         res.status(200).send(MessageHelper.ResponseMessage(true, "All Address By UserId", query))
     } catch(err){
-        res.status(500).send(MessageHelper.ErrorMessage(true, err))
+        res.status(500).send(MessageHelper.ErrorMessage(false, err))
     }
 })
 router.post("/create", passport.authenticate('jwt',{session : false}), async(req, res) =>{
