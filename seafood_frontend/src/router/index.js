@@ -28,43 +28,43 @@ const routes = [
   },
   {
     path: '/profile',
-    name: 'Detail',
-    component: () => Profile
+    name: 'detail',
+    component: Profile
   },
   {
     path: '/profile/address',
-    name: 'Address',
-    component: () => Address
+    name: 'address',
+    component: Address
   },
   {
     path: '/profile/address/:id',
-    name: 'AddressDetail',
-    component: () => AddressDetail
+    name: 'address_detail',
+    component: AddressDetail
   },
   {
     path: '/cart',
     name: 'Cart',
-    component: () => Cart
+    component: Cart
   },
   {
     path: '/product',
     name: 'Product',
-    component: () => Product
+    component: Product
   },
   {
     path: '/product/:id',
     name: 'Detail',
-    component: () => ProductDetail
+    component: ProductDetail
   },
   {
     path: '/product/categories/:id',
     name: 'Categories',
-    component: () => ProductCategories
+    component: ProductCategories
   },
   {
     path: '/checkout',
     name: 'Checkout',
-    component: () => Checkout
+    component: Checkout
   }
 
 ]
