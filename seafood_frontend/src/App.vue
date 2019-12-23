@@ -1,5 +1,7 @@
 <template>
   <div id="app">
+    <b-alert show>Default Alert</b-alert>
+
     <div id="nav">
       <router-link to="/">Home</router-link>|
       <router-link to="/about">About</router-link>
